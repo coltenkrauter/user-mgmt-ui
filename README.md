@@ -2,6 +2,7 @@
 
 A React frontend intended to be a template for my other projects.
 
+
 ## NPM quick start
 
 In the project directory, you can run:
@@ -32,6 +33,23 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+## Docker quick start
+
+In the project directory, you can run:
+
+### `docker build -t user-mgmt-ui .`
+
+Build the app Docker image.
+
+### `docker container run -p 8080:80 user-mgmt-ui:latest`
+
+Run the app Docker container on port 8080.
+
+### `docker build -t user-mgmt-ui . --file ./Dockerfile.test`
+
+Run the app tests using Docker (this is how the tests will be ran during automated deployments).
 
 
 ## Resources

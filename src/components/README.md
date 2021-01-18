@@ -13,6 +13,8 @@ For organizational purposes, we will classify our components into a few differen
 
 ## Definitions
 
+These definitions correspond to the directory structure.
+
 ### basic
 
 Basic components will tend to be very simple and are almost always used as building blocks for other components. 
@@ -56,11 +58,9 @@ Examples could include:
 - MainPage
 - InsightsPage (This could utilze the InsightsWidget)
 
-## Directory structure
+### app
 
-You will notice that there are directories that correspond to the different component categories (pages, widgets...). Each component will be in its own directory and that directory will contain at minimum: `componont.tsx`, `componont.test.tsx` and `index.tsx`.
-
-Finally, there is an app component which is an exception to the component categorizations. The app component is sort of the parent container of the entire app. It should contain ver simple code that imports other components. For example, the app component should basically just include something very similar to the following psudocode:
+The app component is sort of the parent container for the entire app. It should contain very simple code that imports other components. For example, the app component should basically just include something very similar to the following psudocode,
 
 ```typescript
 <div>

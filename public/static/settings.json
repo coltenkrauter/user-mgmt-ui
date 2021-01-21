@@ -1,0 +1,10 @@
+{
+    "debug": "False",
+    "env": "local",
+    "local": "True",
+    "log_level": "10",
+    "production": "False",
+    "project_code_name": "users",
+    "project_name": "User Mgmt UI",
+    "proxy_url": "http://localhost:3000/"
+}

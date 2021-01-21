@@ -1,0 +1,5 @@
+git_url: https://github.com
+git_api_url: https://api.github.com
+git_owner: coltenkrauter
+git_repository: user-mgmt-ui
+git_repository_url: '{{ git_url }}/{{ git_owner }}/{{ git_repository }}'

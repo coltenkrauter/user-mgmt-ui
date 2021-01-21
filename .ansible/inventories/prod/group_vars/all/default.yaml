@@ -1,0 +1,5 @@
+env: prod
+production: yes
+debug: no
+simulate: no
+log_level: 20

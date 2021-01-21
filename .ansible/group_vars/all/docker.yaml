@@ -1,0 +1,3 @@
+docker_image_name: '{{ git_repository }}'
+docker_stack_name: '{{ env }}_{{ git_repository | string }}'
+docker_network: traefik-public

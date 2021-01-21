@@ -1,0 +1,12 @@
+all:
+  children:
+    leader:
+      hosts:
+        krauterdevs.com:
+    build:
+      hosts:
+        krauterdevs.com:   
+  vars:
+    ansible_connection: ssh
+    ansible_user: ubuntu
+    ansible_python_interpreter: /usr/bin/python3

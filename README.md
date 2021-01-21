@@ -1,3 +1,5 @@
+[![Build Status](https://cicd.krauterdevs.com/api/badges/coltenkrauter/user-mgmt-ui/status.svg)](https://cicd.krauterdevs.com/coltenkrauter/user-mgmt-ui)
+
 # user-mgmt-ui
 
 A React frontend intended to be a template for my other projects.

@@ -13,11 +13,11 @@ services:
     deploy:
       labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.users.rule=(Host(`{{ proxy_url }}`))'
-      - 'traefik.http.routers.users.entrypoints=websecure'
-      - 'traefik.http.routers.users.tls.certresolver=letsencryptresolver'
-      - 'traefik.http.services.users.loadbalancer.server.port=80'
-      - 'traefik.http.routers.users.service=users'
+      - 'traefik.http.routers.{{env}}-users.rule=(Host(`{{ proxy_url }}`))'
+      - 'traefik.http.routers.{{env}}-users.entrypoints=websecure'
+      - 'traefik.http.routers.{{env}}-users.tls.certresolver=letsencryptresolver'
+      - 'traefik.http.services.{{env}}-users.loadbalancer.server.port=80'
+      - 'traefik.http.routers.{{env}}-users.service={{env}}-users'
     networks:
     - {{ docker_network }}
 {% if docker_env is defined %}

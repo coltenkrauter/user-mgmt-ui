@@ -11,7 +11,7 @@ log_level: 10
 directories_ansible: '{{ playbook_dir }}'
 directories_build: ~/drone_builds
 directories_docker_socket: /var/run/docker.sock
-directories_files: '{{ ansible_env.HOME }}/.krauterdevs/{{ project_code_name }}/files'
+directories_files: '{{ ansible_env.HOME }}/.krauterdevs/{{ project_code_name }}/{{ env }}/files'
 directories_home: /home/{{ ansible_user }}
 directories_roles: '{{ directories_ansible }}/roles'
 directories_src: /drone/src/

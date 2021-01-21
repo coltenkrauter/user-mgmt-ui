@@ -1,0 +1,10 @@
+# Stage 1 - Build the app
+FROM node:15 as build-stage
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install
+COPY ./ /app/
+COPY ./nginx.conf /
+
+# Run tests
+RUN CI=true npm test --all

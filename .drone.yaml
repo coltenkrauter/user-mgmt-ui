@@ -1,0 +1,77 @@
+---
+kind: pipeline
+type: docker
+name: Deploy development
+
+clone:
+  depth: 1
+
+steps:
+- name: Build and Deploy
+  image: plugins/ansible:3
+  settings:
+    galaxy: /drone/src/.ansible/roles/requirements.yaml
+    playbook: .ansible/deploy.yaml
+    inventory: .ansible/inventories/dev/hosts
+    private_key:
+      from_secret: ansible_private_key
+    vault_password:
+      from_secret: ansible_vault_password
+    # verbose: 2
+
+trigger:
+  branch:
+    - development
+  event:
+    - push
+---
+kind: pipeline
+type: docker
+name: Deploy certification
+
+clone:
+  depth: 1
+
+steps:
+- name: Build and Deploy
+  image: plugins/ansible:3
+  settings:
+    galaxy: /drone/src/.ansible/roles/requirements.yaml
+    playbook: .ansible/deploy.yaml
+    inventory: .ansible/inventories/cert/hosts
+    private_key:
+      from_secret: ansible_private_key
+    vault_password:
+      from_secret: ansible_vault_password
+    # verbose: 2
+
+trigger:
+  branch:
+    - stable
+  event:
+    - push
+---
+kind: pipeline
+type: docker
+name: Deploy production
+
+clone:
+  depth: 1
+
+steps:
+- name: Build and Deploy
+  image: plugins/ansible:3
+  settings:
+    galaxy: /drone/src/.ansible/roles/requirements.yaml
+    playbook: .ansible/deploy.yaml
+    inventory: .ansible/inventories/prod/hosts
+    private_key:
+      from_secret: ansible_private_key
+    vault_password:
+      from_secret: ansible_vault_password
+    # verbose: 2
+
+trigger:
+  event:
+    - tag
+...

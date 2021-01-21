@@ -1,0 +1,8 @@
+# ansible-playbook test.yaml -i inventories/local --vault-id ~/.tokens/vault.txt
+
+- hosts: build
+  roles:
+  - folder_deploy
+  - role: docker_build
+    vars:
+    - testing: true

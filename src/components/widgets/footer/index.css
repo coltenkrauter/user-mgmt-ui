@@ -1,0 +1,11 @@
+.footer {
+    align-items: center;
+    border-top: 1px solid #dadce0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px;
+    width: 100%;
+    box-shadow: none;
+}

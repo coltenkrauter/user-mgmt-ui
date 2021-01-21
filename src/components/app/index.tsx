@@ -6,7 +6,9 @@ const Component = () => {
   return (
     <>
         <Header />
-        <div>App!</div>
+        <div className='content'>
+        	Content!
+        </div>
         <Footer />
     </>
   );

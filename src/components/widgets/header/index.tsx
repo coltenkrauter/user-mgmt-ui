@@ -1,8 +1,9 @@
 import './index.css';
+import Toolbar from '../toolbar';
 
 const Component = () => {
   return (
-    <div>Header!</div>
+    <Toolbar />
   );
 }
 

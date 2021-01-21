@@ -2,8 +2,10 @@ import './index.css';
 
 const Component = () => {
   return (
-    <div className='footer'>
-        Footer!
+    <div className='toolbar'>
+    	<div className='toolbar-project-name'>
+    		Title
+    	</div>
     </div>
   );
 }

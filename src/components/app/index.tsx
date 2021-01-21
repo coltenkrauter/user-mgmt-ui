@@ -1,9 +1,15 @@
-import './App.css';
+import './index.css';
+import Header from '../widgets/header';
+import Footer from '../widgets/footer';
 
-const App = () => {
+const Component = () => {
   return (
-    <div>App!</div>
+    <>
+        <Header />
+        <div>App!</div>
+        <Footer />
+    </>
   );
 }
 
-export default App;
+export default Component;

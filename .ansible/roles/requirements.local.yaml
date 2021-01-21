@@ -1,0 +1,29 @@
+- name: docker_build
+  scm: git
+  src: git@github.com:KrauterDevs/ansible-role-docker-build.git
+  version: development
+
+- name: docker_push
+  scm: git
+  src: git@github.com:KrauterDevs/ansible-role-docker-push.git
+  version: development
+
+- name: file_deploy
+  scm: git
+  src: git@github.com:KrauterDevs/ansible-role-file-deploy.git
+  version: development
+
+- name: folder_deploy
+  scm: git
+  src: git@github.com:KrauterDevs/ansible-role-folder-deploy.git
+  version: development
+
+- name: docker_deploy
+  scm: git
+  src: git@github.com:KrauterDevs/ansible-role-docker-deploy.git
+  version: development
+
+- name: mongo_migrate
+  scm: git
+  src: git@github.com:KrauterDevs/ansible-role-mongo-migrate.git
+  version: development

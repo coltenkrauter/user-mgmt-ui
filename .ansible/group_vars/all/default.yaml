@@ -1,0 +1,25 @@
+project_name: User Mgmt UI
+project_code_name: users
+
+local: no
+production: no
+debug: no
+simulate: yes
+log_level: 10
+
+# Directories
+directories_ansible: '{{ playbook_dir }}'
+directories_build: ~/drone_builds
+directories_docker_socket: /var/run/docker.sock
+directories_files: '{{ ansible_env.HOME }}/.krauterdevs/{{ project_code_name }}/files'
+directories_home: /home/{{ ansible_user }}
+directories_roles: '{{ directories_ansible }}/roles'
+directories_src: /drone/src/
+
+# Proxy
+proxy_subdomain: '{{ "" if production else env+"." }}'
+proxy_base_domain: '{{ project_code_name }}.krauterdevs.com'
+proxy_domain: '{{ proxy_subdomain }}{{ proxy_base_domain }}'
+proxy_protocol: https://
+proxy_path: ''
+proxy_url: '{{ proxy_domain }}{{ proxy_path }}'

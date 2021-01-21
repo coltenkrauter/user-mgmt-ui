@@ -1,0 +1,33 @@
+version: "{{ docker_compose_version }}"
+
+services:
+  
+  main:
+    image: {{ docker_image }}
+{% if local %}
+    ports:
+    - 8080:80
+{% endif %}
+    volumes:
+    - {{ directories_files }}/settings.json:/api/static/settings.json
+    deploy:
+      labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.users.rule=(Host(`{{ proxy_url }}`))'
+      - 'traefik.http.routers.users.entrypoints=websecure'
+      - 'traefik.http.routers.users.tls.certresolver=letsencryptresolver'
+      - 'traefik.http.services.users.loadbalancer.server.port=80'
+      - 'traefik.http.routers.users.service=users'
+    networks:
+    - {{ docker_network }}
+{% if docker_env is defined %}
+    environment:
+      {{ docker_env | to_nice_yaml(indent=2) | string | indent(6) | trim }}
+{% endif %}
+
+networks:
+  {{ docker_network }}:
+{% if not local %}
+    external: true
+    name: {{ docker_network }}
+{% endif %}

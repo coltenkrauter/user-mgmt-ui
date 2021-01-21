@@ -1,0 +1,14 @@
+# ansible-playbook run.yaml -i inventories/local --vault-id ~/.tokens/vault.txt
+
+- hosts: localhost
+  roles:
+  - role: docker_build
+    vars:
+    - path: '{{ playbook_dir }}/..'
+  - role: file_deploy
+    vars:
+    - src: settings.json.j2
+    - directories_files: '{{ playbook_dir }}/../static/'
+  - role: docker_deploy
+    vars:
+    - with_registry_auth: false

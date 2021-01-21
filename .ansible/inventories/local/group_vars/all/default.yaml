@@ -1,0 +1,13 @@
+env: local
+local: yes
+
+# Directories
+directories_home: '{{ lookup("env", "HOME") }}'
+directories_src: '{{ directories_ansible }}/..'
+directories_files: '{{ playbook_dir }}/../static'
+
+# Proxy
+proxy_domain: localhost:3000
+proxy_protocol: http://
+proxy_path: /
+proxy_url: '{{ proxy_protocol }}{{ proxy_domain }}{{ proxy_path }}'

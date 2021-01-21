@@ -8,7 +8,6 @@
   - role: file_deploy
     vars:
     - src: settings.json.j2
-    - directories_files: '{{ playbook_dir }}/../static/'
   - role: docker_deploy
     vars:
     - with_registry_auth: false

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { store } from '../index';
+// import { store } from '../index';
 
 const instance = axios.create({
   responseType: 'json',
@@ -7,8 +7,7 @@ const instance = axios.create({
 
 // This gets called on every axios HTTP request
 instance.interceptors.request.use((config) => {
-  const state = store.getState();
-  config.baseURL = state.settings.API_BASE_URL;
+  // const state = store.getState();
  
   return config;
 }, (err) => {

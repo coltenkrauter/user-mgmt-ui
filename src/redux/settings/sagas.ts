@@ -42,4 +42,3 @@ function* saga() {
 }
 
 export { saga as settingsSaga }
-

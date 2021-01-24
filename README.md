@@ -54,6 +54,11 @@ Run the app Docker container on port 8080.
 Run the app tests using Docker (this is how the tests will be ran during automated deployments).
 
 
+## CICD
+
+I am using [Drone](http://drone.io/) for automated testing and deployment. Check the [.drone.yaml](./.drone.yaml) file to understand the build steps at a high level. Generally, GitHub events trigger Drone builds to begin and the Drone build steps will often run [Ansible](https://www.ansible.com/) roles that I have written for testing and deploying apps to their respective environments.
+
+
 ## Resources
 
 [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

@@ -4,7 +4,7 @@ local: yes
 # Directories
 directories_home: '{{ lookup("env", "HOME") }}'
 directories_src: '{{ directories_ansible }}/..'
-directories_files: '{{ playbook_dir }}/../static'
+directories_files: '{{ playbook_dir }}/../public/static'
 
 # Proxy
 proxy_domain: localhost:3000

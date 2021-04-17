@@ -13,7 +13,7 @@ services:
     deploy:
       labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.{{env}}-users.rule=(Host(`{{ proxy_url }}`))'
+      - 'traefik.http.routers.{{env}}-users.rule=(Host(`{{ proxy_url }}`, `www.{{ proxy_url }}`))'
       - 'traefik.http.routers.{{env}}-users.entrypoints=websecure'
       - 'traefik.http.routers.{{env}}-users.tls.certresolver=letsencryptresolver'
       - 'traefik.http.services.{{env}}-users.loadbalancer.server.port=80'

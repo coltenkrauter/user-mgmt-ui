@@ -1,6 +1,5 @@
 .toolbar {
     align-items: center;
-    border-bottom: 1px solid #dadce0;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -8,13 +7,18 @@
     padding: 0 12px;
     width: 100%;
     box-shadow: none;
+    margin: 8px;
 }
 
 .toolbar .toolbar-project-name {
     color: rgba(0,0,0,0.8);
     font-family: sans-serif;
-    font-size: xx-large;
+    font-size: large;
     font-weight: 100;
     margin: 8px;
-    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.toolbar img {
+    height: 13px;
 }

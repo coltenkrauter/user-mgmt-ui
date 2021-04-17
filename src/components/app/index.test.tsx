@@ -10,6 +10,6 @@ test('renders learn react link', () => {
   let store = mockStore(initialState);
 
   render(<Provider store={store}><Component /></Provider>);
-  const linkElement = screen.getByText(/Content!/i);
+  const linkElement = screen.getByText(/live/i);
   expect(linkElement).toBeInTheDocument();
 });

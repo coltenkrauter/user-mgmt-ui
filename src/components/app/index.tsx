@@ -17,7 +17,7 @@ const Component = () => {
     <>
         <Header />
         <div className='content'>
-        	Content!
+        	<img src="/static/val_and_lily.jpg" alt="Valerie and baby Lily" className="photo effect6" />
         </div>
         <Footer />
     </>

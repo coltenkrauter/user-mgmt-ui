@@ -18,7 +18,7 @@ const Component = () => {
         <Header />
         <div className='content'>
 
-      <iframe src="https://www.youtube.com/embed/j9mJkvJEE1k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <iframe className='vid' src="https://www.youtube.com/embed/gbJx5NtQj6g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <br /><br />
 Join a memorial service for Valerie Othus. 
 

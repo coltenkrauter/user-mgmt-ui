@@ -42,3 +42,12 @@
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
 }
+.vid {
+    height: 600px;
+    min-width: 600px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

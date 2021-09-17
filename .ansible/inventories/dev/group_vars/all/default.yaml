@@ -1,2 +1,2 @@
-env: val
-proxy_domain: rememberval.com
+env: dev
+proxy_domain: micahandlynne.com

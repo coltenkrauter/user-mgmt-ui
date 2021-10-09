@@ -45,6 +45,7 @@
 .vid {
     height: 600px;
     min-width: 600px;
+    max-width: 100vp;
 }
 .content {
     display: flex;

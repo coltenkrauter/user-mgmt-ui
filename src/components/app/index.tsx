@@ -9,7 +9,7 @@ import { updateSettings } from '../../redux/settings';
 const Component = () => {
   const dispatch = useDispatch();
   const showVideo = true;
-  const youtubelink = 'https://www.youtube.com/embed/9RuMVoR5GP0';
+  const youtubelink = 'https://www.youtube.com/embed/et98j5MniGI';
 
   useEffect(()=>{
     dispatch(updateSettings());
